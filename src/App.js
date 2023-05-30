@@ -5,6 +5,8 @@ import Header from './components/Header';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import DancingFrontPage from './components/DancingFrontPage';
+import About from './components/About';
+import Techstack from './components/Techstack';
 
 const darkTheme = createTheme({
   palette: {
@@ -18,8 +20,10 @@ function App() {
     <React.Fragment>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline/>
-        <Header></Header>
+        <Header/>
         <DancingFrontPage/>
+        <About/>
+        <Techstack/>
       </ThemeProvider>
     </React.Fragment>
   );
