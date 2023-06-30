@@ -16,7 +16,7 @@ const Header = () => {
           </div>
           <div style={{display:'flex', alignItems: 'center'}}>
             <ResumeButton/>
-            <GithubButton/>
+            <GithubButton link='https://github.com/justin-xing' text='Github'/>
           </div>
         </Toolbar>
       </AppBar>

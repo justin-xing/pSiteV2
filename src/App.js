@@ -7,6 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import DancingFrontPage from './components/DancingFrontPage';
 import About from './components/About';
 import Techstack from './components/Techstack';
+import Projects from './components/Projects';
 
 const darkTheme = createTheme({
   palette: {
@@ -24,6 +25,7 @@ function App() {
         <DancingFrontPage/>
         <About/>
         <Techstack/>
+        <Projects />
       </ThemeProvider>
     </React.Fragment>
   );
