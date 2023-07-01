@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import '@fontsource/roboto/400.css';
 import Header from './components/Header';
@@ -17,14 +17,30 @@ const darkTheme = createTheme({
 
 
 function App() {
+
+  const scrollAboutHandler = () => {
+    aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  const scrollStackHandler = () => {
+    stackRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  const aboutRef = useRef(null);
+  const stackRef = useRef(null)
+
   return (
     <React.Fragment>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline/>
         <Header/>
-        <DancingFrontPage/>
-        <About/>
-        <Techstack/>
+        <DancingFrontPage scrollAboutHandler={scrollAboutHandler}/>
+        <div ref={aboutRef}>
+          <About scrollStackHandler={scrollStackHandler}/>
+        </div>
+        <div ref={stackRef}>
+          <Techstack/>
+        </div>
         <Projects />
       </ThemeProvider>
     </React.Fragment>

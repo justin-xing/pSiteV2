@@ -9,8 +9,8 @@ import djangoImage from '../assets/stackIcons/django.svg';
 import sqlImage from '../assets/stackIcons/sql.svg';
 
 const Techstack = () => {
-  return(
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+  return (
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '10vh'}}>
       <Typography variant='h2' style={{margin: '0 0 3vh 0'}}>My Techstack</Typography>
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <img src={htmlImage} alt='HTML'style={{width: '7vw', height: 'auto', margin: '10px'}}/>

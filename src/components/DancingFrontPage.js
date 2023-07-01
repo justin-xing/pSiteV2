@@ -3,11 +3,11 @@ import RobloxDance from './RobloxDance';
 import IntroTextbox from './IntroTextbox';
 
 
-const DancingFrontPage = () => {
+const DancingFrontPage = (props) => {
   return (
     <div style={{height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <RobloxDance/>
-      <IntroTextbox/>
+      <IntroTextbox scrollAboutHandler={props.scrollAboutHandler}/>
       <RobloxDance/>
     </div>
   );
